@@ -179,7 +179,7 @@ function signIn({ providers }) {
         <div className='flex flex-col items-center justify-center min-h-screen py-6-mt-56 px-14 text-center'>
         <div>
 
-            <h1 className='font-lg italic bg-green-700'>THE FARMERS MARKET</h1>
+            <h1 className='font-lg italic text-green-700bold'>THE FARMERS MARKET</h1>
            <p className="font-xs italic"> Welcome to the Farmers market where farmers and consumers interact on a daily basis</p>
 
         <div className='mt-40'>
