@@ -5,7 +5,7 @@ function Story({ img, username }) {
         <div>
 
             <img className='h-14 w-14 rounded-full 
-            p-[1.5px] border-red-500 
+            p-[1.5px] border-green-500 
             border-2 object-contain 
             cursor-pointer hover:scale-110 transition transform
             duration-200 ease-out' 
