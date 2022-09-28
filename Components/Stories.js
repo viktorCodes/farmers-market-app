@@ -21,13 +21,14 @@ export default function Stories() {
   }, []);
 
   return(
-    <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-200 border rounded-sm overflow-x-scroll  scrollbar-thin scrollbar-thumb-black ">
-      
-      {session && (
+    <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-20 border rounded-sm overflow-x-scroll  scrollbar-thin scrollbar-thumb-black ">
 
-        <Story img={session.user.img}
-               username={session.user.username}/>
-      )}
+      
+{session && (
+
+<Story img={session.user.img}
+       username={session.user.username}/>
+)}
       
       {suggestions.map((profile) => (
         <Story key={profile.id}  
@@ -40,7 +41,6 @@ export default function Stories() {
     </div>
 )
 }
-
 
 
 

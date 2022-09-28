@@ -9,7 +9,7 @@ function MiniProfile() {
 
       <div className='flex-1 mx-4'>  
         <h2 className='font-bold'>{session?.user?.username}</h2> 
-            <h3 className='text-sm text-gray-400'>Welcome to the Farmer's Market</h3>
+   {/*add location */}     <h3 className='text-sm text-gray-400'>Farm location</h3>
       
       </div>
 

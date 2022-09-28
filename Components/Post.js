@@ -83,7 +83,7 @@ function Post({ id, username, userImg, img, caption}) {
         </div>
 
         {/* img */}
-        <img src={userImg} className='object-cover w-full' alt='' />
+        <img src={img} className='object-cover w-full' alt='' />
 
         {/* Buttons */}
 
@@ -102,18 +102,18 @@ function Post({ id, username, userImg, img, caption}) {
                 
     
                 <ChatIcon className='btn' />
-    
+                             {/*add messaging feature*/}
                 <PaperAirplaneIcon className='btn' />
             </div>
     
-            <BookmarkIcon className='btn' /> 
+            <BookmarkIcon className='btn' />   {/*bookmark post*/}
            </div>
 
         )}
 
        
 
-        {/* Caption */}
+        {/* Caption - Add functionality of show more.. */}
 
         <p className='p-5 truncate'>
 
