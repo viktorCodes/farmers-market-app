@@ -26,7 +26,7 @@ function Header(){
     const router = useRouter();
 
     return (
-        <div className='shadow-sm border-b bg-white sticky top-0 z-50'>
+        <div className='shadow-sm border-b bg-green-100 sticky top-0 z-50'>
 
            <div className='flex justify-between  max-w-6xl mx-5 xl:mx-auto'>
 
@@ -81,8 +81,8 @@ function Header(){
                        <PlusCircleIcon onClick={() =>setOpen(true)} className='navBtn'/>
                        <UserGroupIcon className='navBtn'/>
                        <HeartIcon className='navBtn'/>
-     
-                       <img  onClick={signOut} className="h-10 w-10 rounded-full cursor-pointer" src={session.user.image} alt="profilepic"/>
+                           {/*add onclick to image to redirect to profile page */}
+                       <img className="h-10 w-10 rounded-full cursor-pointer" src={session.user.image} alt="profilepic"/>
                   
                    </>
                   ):  [
