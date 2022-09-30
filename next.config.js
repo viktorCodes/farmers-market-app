@@ -1,13 +1,14 @@
-/* @type {import('next').NextConfig} */
-/*const nextConfig = {
+ /*@type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
-
-module.exports = nextConfig */
-
-module.exports = {
   Images: {
-      domains: ['links.papareact.com']
-  }
+    domains: ['links.papareact.com']
 }
+}
+
+module.exports = nextConfig 
+
+/*module.exports = {
+  
+}*/

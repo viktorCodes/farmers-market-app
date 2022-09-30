@@ -21,12 +21,13 @@ export default function Stories() {
   }, []);
 
   return(
-    <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-20 border rounded-sm overflow-x-scroll  scrollbar-thin scrollbar-thumb-black ">
+    <div className="flex space-x-2 p-6 bg-green-100 mt-8 border-gray-20 border rounded-sm overflow-x-scroll  scrollbar-thin scrollbar-thumb-black ">
 
       
 {session && (
 
-<Story img={session.user.img}
+/*add button with plus sign to add img or vid to your story */
+<Story img={session.user.image}  
        username={session.user.username}/>
 )}
       

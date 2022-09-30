@@ -32,16 +32,14 @@ function Header(){
 
             {/* LEFT*/}
 
-        <div onClick={() => router.push('/') } className='relative hidden lg:inline-grid w-24' >
+        <div className='relative hidden lg:inline-grid w-24' >
 
-        <img src="https://links.papareact.com/ocw"
-              layout="fill" objectfit="contain"/>
+        <p layout="fill" objectfit="contain">Farmers Market</p>
         </div>
 
-        <div onClick={() => router.push('/') } className='relative  w-10 lg:hidden flex-shrink-0 cursor-pointer'>
+        <div  className='relative  w-10 lg:hidden flex-shrink-0 cursor-pointer'>
 
-<img src="https://links.papareact.com/jjm"
-      layout="fill" objectfit="contain"/>
+        <p layout="fill" objectfit="contain">Farmers Market</p>
        </div>
 
 
@@ -55,7 +53,7 @@ function Header(){
 <div className='absolute inset-y-0 pl-3 flex items-center pointer-events-none'>
  <SearchIcon className='h-5 w-5 text-gray-500' />
 </div>
- <input className='bg-gray-50 block w-full pl-10 sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md ' type="text" placeholder='Search' />
+ <input className='bg-yellow-100 block w-full pl-10 sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md ' type="text" placeholder='Search' />
 
 </div>
              </div>
@@ -67,7 +65,7 @@ function Header(){
                  <div className="flex items-center justify-end space-x-4">
 
                   <HomeIcon onClick={() => router.push('/') } className='navBtn'/>
-                  <MenuIcon className='h-6 md:hidden cursor-pointer'/>
+                  <MenuIcon onClick={() => router.push('/') } className='h-6 md:hidden cursor-pointer'/>
 
                   {session ? (
                     <>
