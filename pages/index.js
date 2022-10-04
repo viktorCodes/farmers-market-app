@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from '../Components/Header'
 import Feed from '../Components/Feed'
 import Modal from '../Components/Modal'
+
 //import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -16,7 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     
+  
+    
 
       {/*HEADER */}
     <Header />

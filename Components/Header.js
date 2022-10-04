@@ -80,7 +80,7 @@ function Header(){
                        <UserGroupIcon className='navBtn'/>
                        <HeartIcon className='navBtn'/>
                            {/*add onclick to image to redirect to profile page */}
-                       <img className="h-10 w-10 rounded-full cursor-pointer" src={session.user.image} alt="profilepic"/>
+                       <img className="h-10 w-10 rounded-full cursor-pointer" src={session.user.image} alt="profilepic" onClick={() => router.push('/profile')}/>
                   
                    </>
                   ):  [

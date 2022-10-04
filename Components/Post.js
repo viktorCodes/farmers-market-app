@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from "@firebase/firestore";
 import{
     BookmarkIcon,
     ChatIcon,
@@ -59,9 +59,8 @@ function Post({ id, username, userImg, img, caption}) {
 
         const commentToSend = comment;
         setComment('');
-
-
-        await addDoc(query(collection(db, 'posts', id, 'comments')), {
+        
+        await addDoc(query(collection(db, 'posts', id, 'comment')), {
             comment: commentToSend,
             username: session.user.username,
             userImage: session.user.image,
@@ -121,18 +120,20 @@ function Post({ id, username, userImg, img, caption}) {
                 <p className='font-bold mb-1'>{likes.length} likes</p>
             ) }
               
-            <span className='font-bold mr-1'>{username} </span>
+            <span className='font-bold mr-1'>{username}  </span>
             {caption}
         </p>
 
         {/* Comments */}
 
         {comments.length > 0 && (
-            <div className="ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
-                {comments.map((comment) => {
-                    <div key={comment.id} className='flex items-center space-x-2 mb-3'>
-                        <img className='h-7 rounded-full' src={comment.data().profileImg} alt="" />
-                       <p className='text-sm flex-1'><span className='font-bold'>{comment.data().username}</span>{""}{comment.data().comment}</p>
+<div className="ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
+        {comments.map(comment => 
+        <div key={comment.id} className='flex items-center space-x-2 mb-3'>
+        <img className='h-7 rounded-full' src={comment.data().userImage} alt=""/>
+        <p className='text-sm flex-1'>
+        <span className='font-bold'>{comment.data().username}</span>
+         {" "}{comment.data().comment}</p>
 
 
                        <Moment fromNow className='pr-5 txt-xs'>
@@ -141,9 +142,9 @@ function Post({ id, username, userImg, img, caption}) {
                        </Moment>
                     </div>
                     
-                })}
+                )},
             </div>
-        )}
+)}
 
         {/* Input box */}
           
